@@ -6,7 +6,7 @@ void tearDown(void) {}
 
 void setUp(void)
 {
-    //   nombreAppelOperation = 0;
+    //   nombreAppelOperation = 0;  
 }
 
 void test_tri_bulle_return_nul_si_tableau_vide_ou_longueur_vide(void)

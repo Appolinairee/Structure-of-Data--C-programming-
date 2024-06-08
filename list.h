@@ -11,12 +11,6 @@ typedef struct Datas
     void * data2;
 } Datas;
 
-typedef struct File
-{
-    void *data;
-    struct FILE * next;
-} File;
-
 extern int tri_bulle(int *t, int len);
 
 extern int list_parcours(Node **List, int (*operation)(Node **List, void *data), void *data);

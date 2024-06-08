@@ -216,17 +216,6 @@ void remove_element(Node **list, int pos)
 }
 */
 
-
-
-
-
-
-
-
-
-
-
-
 int tri_bulle(int tab[], int len)
 {
     int r, temp;
@@ -250,10 +239,6 @@ int tri_bulle(int tab[], int len)
 
     return 1;
 }
-
-
-
-
 
 // int main()
 // {

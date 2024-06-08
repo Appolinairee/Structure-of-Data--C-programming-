@@ -1,0 +1,63 @@
+Tri à bulles (Bubble Sort) :
+
+Le tri à bulles parcourt le tableau à plusieurs reprises et compare les éléments adjacents. S'il trouve un élément plus grand à gauche qu'à droite, il les échange. Ce processus se répète jusqu'à ce que le tableau soit trié.
+Il a une complexité temporelle de O(n^2), ce qui le rend inefficace pour de grands ensembles de données. Cependant, il est simple à implémenter.
+
+
+
+Tri par sélection (Selection Sort) :
+
+Le tri par sélection parcourt le tableau à plusieurs reprises, en cherchant à chaque itération l'élément le plus petit et en le plaçant à sa position correcte.
+Il a également une complexité temporelle de O(n^2), mais il effectue moins d'échanges que le tri à bulles.
+
+
+
+Tri par insertion (Insertion Sort) :
+
+Le tri par insertion construit le tableau trié en insérant un élément non trié à sa place appropriée dans le tableau trié.
+Il a une complexité temporelle de O(n^2), mais il peut être plus efficace que le tri à bulles et le tri par sélection pour de petites quantités de données ou pour des données presque triées.
+
+
+
+
+Tri rapide (Quick Sort) :
+
+Le tri rapide utilise une approche de type diviser pour régner. Il choisit un élément pivot et partitionne le tableau en deux sous-tableaux, un contenant des éléments inférieurs ou égaux au pivot et l'autre contenant des éléments supérieurs. Ensuite, il répète ce processus récursivement pour les sous-tableaux.
+En moyenne, il a une complexité temporelle de O(n log n), ce qui en fait l'un des algorithmes de tri les plus rapides. Cependant, dans le pire des cas, il peut atteindre une complexité temporelle de O(n^2).
+
+
+Tri fusion (Merge Sort) :
+
+Le tri fusion divise récursivement le tableau en deux moitiés, trie chaque moitié séparément, puis fusionne les moitiés triées pour obtenir le tableau trié final.
+Il a une complexité temporelle de O(n log n) dans tous les cas, ce qui en fait une bonne option pour les grandes quantités de données.
+
+
+Tri par tas (Heap Sort) :
+
+Le tri par tas utilise une structure de données appelée tas pour trier les éléments. Il construit d'abord un tas à partir des données, puis extrait de manière répétée l'élément racine du tas (qui est le plus grand pour un tas max ou le plus petit pour un tas min) pour obtenir le tableau trié.
+Il a une complexité temporelle de O(n log n) et n'a pas besoin d'espace supplémentaire comme le tri fusion, ce qui le rend efficace pour trier des données en place.
+
+
+
+
+
+
+
+Recherche séquentielle (ou linéaire) :
+
+C'est l'algorithme de recherche le plus simple où chaque élément de la liste est vérifié un par un jusqu'à ce que l'élément recherché soit trouvé ou que la fin de la liste soit atteinte.
+La complexité temporelle de la recherche séquentielle est O(n), où n est la taille de la liste. C'est efficace pour de petites listes non triées, mais inefficace pour de grandes listes.
+Recherche binaire :
+
+La recherche binaire est applicable uniquement aux listes triées. Elle divise récursivement la liste en deux moitiés et compare l'élément recherché avec l'élément au milieu de la liste.
+Si l'élément est inférieur à l'élément au milieu, la recherche se poursuit dans la première moitié de la liste. Sinon, elle se poursuit dans la deuxième moitié.
+La complexité temporelle de la recherche binaire est O(log n), où n est la taille de la liste. C'est donc beaucoup plus efficace que la recherche séquentielle pour de grandes listes triées.
+Recherche par interpolation :
+
+C'est une amélioration de la recherche binaire, qui fonctionne mieux sur les listes où les éléments sont uniformément distribués.
+Au lieu de diviser la liste en deux moitiés égales, la recherche par interpolation utilise une estimation pour déterminer approximativement la position de l'élément recherché.
+La complexité temporelle de la recherche par interpolation peut être aussi bonne que O(log log n), mais elle peut être pire que O(n) dans le pire des cas.
+Recherche de Fibonacci :
+
+C'est une autre amélioration de la recherche binaire, qui utilise la suite de Fibonacci pour choisir les points de division de la liste.
+La complexité temporelle de la recherche de Fibonacci est O(log n), mais elle peut être moins efficace en pratique que la recherche binaire dans de nombreux cas.
