@@ -12,3 +12,4 @@ typedef struct TREE
 } TREE;
 
 extern int parcours_largueur(TREE** t, int (*operation)(TREE **f, void *data), void *data);
+extern int parcours_profondeur(TREE **t, int (*operation)(TREE **f, void *data), void *data, int type);

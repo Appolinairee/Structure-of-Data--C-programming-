@@ -1,1 +1,0 @@
-extern int tri_bulle(int *t, int len);

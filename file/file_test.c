@@ -6,14 +6,14 @@ void tearDown(void) {}
 
 void setUp(void) {}
 
-void test_enfiler_file_return_0_when_element_null(void)
+void test_operation_enfiler_file_return_0_when_element_null(void)
 {
     LFILE *f;
     int res = _enfiler(&f, 0);
     TEST_ASSERT_EQUAL(res, 0);
 }
 
-void test_enfiler_enfile_element_si_file_vide(void)
+void test_operation_enfiler_enfile_element_si_file_vide(void)
 {
     LFILE *f = 0, elt;
     memset(&elt, 0, sizeof(LFILE));
@@ -22,7 +22,7 @@ void test_enfiler_enfile_element_si_file_vide(void)
     TEST_ASSERT_EQUAL(0, 0);
 }
 
-void test_enfiler_enfile_element_en_fin_de_file_si_file_non_vide(void)
+void test_operation_enfiler_enfile_element_en_fin_de_file_si_file_non_vide(void)
 {
     LFILE *f = 0, elt1, elt2;
     memset(&elt1, 0, sizeof(LFILE));
@@ -30,8 +30,26 @@ void test_enfiler_enfile_element_en_fin_de_file_si_file_non_vide(void)
     f = &elt1;
 
     _enfiler(&f, &elt2);
+
     TEST_ASSERT_EQUAL(elt1.next, &elt2);
 }
+
+void test_enfiler_place_en_fin_de_file_un_nouvel_element_si_file_a_3_elements(void)
+{
+    LFILE *f = 0, elt1, elt2, elt3;
+    memset(&elt1, 0, sizeof(LFILE));
+    memset(&elt2, 0, sizeof(LFILE));
+    memset(&elt3, 0, sizeof(LFILE));
+    f = &elt1;
+    elt1.next = &elt2;
+
+    enfiler(&f, &elt3);
+
+    TEST_ASSERT_EQUAL(&elt3, elt2.next);
+}
+
+
+
 
 void test_defiler_return_0_when_file_empty(void)
 {
@@ -68,9 +86,10 @@ int main(void)
 {
     UNITY_BEGIN();
 
-    RUN_TEST(test_enfiler_file_return_0_when_element_null);
-    RUN_TEST(test_enfiler_enfile_element_si_file_vide);
-    RUN_TEST(test_enfiler_enfile_element_en_fin_de_file_si_file_non_vide);
+    RUN_TEST(test_operation_enfiler_file_return_0_when_element_null);
+    RUN_TEST(test_operation_enfiler_enfile_element_si_file_vide);
+    RUN_TEST(test_operation_enfiler_enfile_element_en_fin_de_file_si_file_non_vide);
+    RUN_TEST(test_enfiler_place_en_fin_de_file_un_nouvel_element_si_file_a_3_elements);
 
     RUN_TEST(test_defiler_return_0_when_file_empty);
     RUN_TEST(test_defiler_when_file_have_one_element_it_s_become_empty);
